@@ -1,0 +1,144 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Home</title>
+    <link rel="stylesheet" href="{% static 'bootstrap/bootstrap.min.css' %}">
+    <script src="{% static 'bootstrap/bootstrap.min.js' %}"></script>
+
+    <style>
+        nav {
+            background-color: #333;
+            overflow: overlay;
+            padding: 0%;
+
+        }
+
+        nav ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+
+        }
+
+        nav li {
+            float: left;
+
+        }
+
+        nav li a {
+            display: inline-block;
+            color: white;
+            text-align: right;
+            padding: 14px 16px;
+            text-decoration: none;
+
+        }
+
+        nav li a:hover {
+            background-color: #111;
+        }
+
+        .nav-container {
+            text-align: center;
+            background-color: #333;
+            padding: 16px;
+        }
+
+        .nav-container ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .nav-container li {
+            display: inline-block;
+            margin-right: 20px;
+        }
+
+        .nav-container li:last-child {
+            margin-right: 0;
+        }
+
+        h5 {
+            text-align: center;
+            margin-top: 60px;
+            margin-bottom: auto;
+        }
+
+        h1 {
+            text-align: center;
+            margin-bottom: 25px;
+        }
+
+        h3 {
+            text-align: center;
+            margin-top: 10px;
+        }
+
+
+        li {
+            width: 7%;
+        }
+    </style>
+</head>
+
+
+<body>
+
+    <div class="nav-container">
+        <ul>
+            <li><a href="{% url 'home' %}">Home</a></li>
+            <li><a href="{% url 'predictor' %}">Services</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Contact</a></li>
+        </ul>
+    </div>
+
+    <h5>Welcome to our website</h5> <br><br>
+    <h1>Explore our services</h1>
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-12 col-md-6">
+
+                <div class="service-box">
+                    <h3>Crop Recommendation</h3>
+
+                    <div class="text-center">
+                        <p>
+                            Recommendation of best Crop which you should cultivated in farm
+                        </p>
+                        <a href="{% url 'predictor' %}">Checkout</a>
+                    </div>
+                </div>
+            </div>
+
+            <br>
+            <div class="col-sm-12 col-md-6">
+                <div class="service-box">
+                    <h3>Plant Disease Detector</h3>
+                    <div class="text-center">
+                        <p> consectetur adipiscing elit. Sed viverra dui vel dolor dignissim,
+                            a
+                        </p>
+                        <a href="{% url 'predictor' %}">Checkout</a>
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <!-- Add this code anywhere in the body -->
+    <img src="{% static 'images/crops.jpg' %}" alt="Image of crops">
+
+
+</body>
+
+</html>
