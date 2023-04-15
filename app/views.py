@@ -38,24 +38,6 @@ def formInfo(request):
     return render(request, 'main.html', context)
 
 
-"""
-def home(request):
-    context = {}
-    if request.method == 'POST':
-        Nitrogen= float(request.POST.get('N'))
-        Phosporus=float(request.POST.get('P'))
-        Potasium=float(request.POST.get('K'))
-        temperature=float(request.POST.get('T'))
-        humidity=float(request.POST.get('H'))
-        ph=float(request.POST.get('Ph'))
-        rainfall=float(request.POST.get('R'))
-
-        data = np.array([[Nitrogen, Phosporus, Potasium, temperature, humidity, ph, rainfall]])
-        prediction = SVM.predict(data)
-
-        context = {
-        'result': "You should grow "+prediction[0]
-        }
-    
-    return render(request, 'home.html',context)
- """
+def plantde(request):
+    # context = {"message": "This is a dictionary"}
+    return render(request, 'plantde.html')

@@ -6,7 +6,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Crop Recommendation System</title>
+    <title>Plant Disease Detection System</title>
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="{% static 'bootstrap/bootstrap.min.css' %}">
     <style>
@@ -116,6 +116,8 @@
         li {
             width: 7%;
         }
+
+        .btn-primary
     </style>
 </head>
 
@@ -123,56 +125,36 @@
 <body>
 
     <div class="nav-container">
-        <ul>
-            <li><a href="{% url 'home' %}">Home</a></li>
-            <li><a href="{% url 'predictor' %}">Services</a></li>
-            <li><a href="#">About</a></li>
-            <li><a href="#">Contact</a></li>
-        </ul>
-    </div>
-    <h1>Crop Recommendation System</h1>
-    <hr>
+        <div class="container-fluid">
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
 
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link" href="{% url 'home' %}">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{% url 'predictor' %}">Services</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Contact</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div <h1>Plant Disease Detection System</h1>
+    <hr>
     <div class="container">
 
-        <form action="crop_result">
-            <div class="form-group">
-                <label for="N">Enter ratio of Nitrogen </label>
-                <input type="number" required step="any" class="form-control" id="N" name="N"
-                    placeholder="Enter Nitrogen(N) Value e.g 56">
-            </div>
-            <div class="form-group">
-                <label for="P">Enter ratio of Phosphorus</label>
-                <input type="number" required step="any" class="form-control" id="P" name="P"
-                    placeholder="Enter Phosphorus(P) Value e.g 65">
-            </div>
-            <div class="form-group">
-                <label for="K">Enter ratio of Potassium</label>
-                <input type="number" required step="any" class="form-control" id="K" name="K"
-                    placeholder="Enter Potassium(K) Value  e.g 73">
-            </div>
-            <div class="form-group">
-                <label for="T">Enter average Temperature value around the field</label>
-                <input type="number" required step="any" class="form-control" id="T" name="T"
-                    placeholder="Enter Temperature Value e.g 25">
-            </div>
-            <div class="form-group">
-                <label for="H">Enter average Humidity value around the field</label>
-                <input type="number" required step="any" class="form-control" id="H" name="H"
-                    placeholder="Enter Humidity Value e.g ">
-            </div>
-            <div class="form-group">
-                <label for="Ph">Enter pH Value of the soil</label>
-                <input type="number" required step="any" class="form-control" id="Ph" name="Ph"
-                    placeholder="Enter Ph Value e.g 6">
-            </div>
-            <div class="form-group">
-                <label for="R">Enter average amount of Rainfall around the field</label>
-                <input type="number" required step="any" class="form-control" id="R" name="R"
-                    placeholder="Enter Rainfall Value e.g 189">
-            </div>
-            <button type="submit" class="btn btn-primary">Predict</button>
-        </form>
+        <h5>Service will be available soon</h5> <br>
+        <br>
+        <a href="{% url 'predictor' %}">Checkout -Crop Recommendation</a>
 
     </div>
 
