@@ -86,7 +86,8 @@
         }
 
         @media (max-width: 768px) {
-            body {
+
+            /*  body {
                 line-height: 1.2;
             }
 
@@ -101,6 +102,20 @@
 
             nav-container ul {
                 display: inline-block;
+            } */
+            nav-container ul {
+                flex-wrap: wrap;
+                justify-content: flex-end;
+            }
+
+            .nav-container li {
+                display: inline-block;
+                margin-right: 20px;
+                margin-bottom: 10px;
+            }
+
+            .nav-container li:last-child {
+                margin-right: 0;
             }
         }
 
