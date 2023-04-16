@@ -41,3 +41,11 @@ def formInfo(request):
 def plantde(request):
     # context = {"message": "This is a dictionary"}
     return render(request, 'plantde.html')
+
+
+def about(request):
+    return render(request, 'about.html')
+
+
+def contact(request):
+    return render(request, 'contact.html')

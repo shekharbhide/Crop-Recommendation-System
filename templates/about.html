@@ -1,0 +1,135 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Home Page CRS</title>
+    <link rel="stylesheet" href="{% static 'bootstrap/bootstrap.min.css' %}">
+    <script src="{% static 'bootstrap/bootstrap.min.js' %}"></script>
+
+    <style>
+        body {
+            line-height: 0.5;
+            background-image: url(../static/images/crp.jpg);
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center center;
+            background-attachment: fixed;
+
+            /* adjust this value to create space for the navbar */
+        }
+
+
+
+
+        /* style for nav */
+        nav {
+            background-color: #333;
+            overflow: overlay;
+            padding: 0;
+            height: auto;
+        }
+
+        nav ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+        }
+
+        nav li {
+            float: left;
+        }
+
+        nav li a {
+            display: inline-block;
+            color: white;
+            text-align: right;
+            padding: 14px 16px;
+            text-decoration: none;
+        }
+
+        nav li a:hover {
+            background-color: #111;
+        }
+
+        .nav-container {
+            text-align: center;
+            background-color: #333;
+            padding: 16px;
+        }
+
+        .nav-container ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .nav-container li {
+            display: inline-block;
+            margin-right: 20px;
+        }
+
+        .nav-container li:last-child {
+            margin-right: 0;
+        }
+
+
+        @media (max-width: 768px) {
+            body {
+                line-height: 1.2;
+            }
+
+            .nav-container {
+                text-align: right;
+            }
+
+            .nav-container li {
+                display: block;
+                margin: 10px 0;
+            }
+
+            nav-container ul {
+                display: inline-block;
+            }
+        }
+
+
+
+
+
+        .container {
+            margin-top: 40px;
+        }
+
+
+        h1 {
+            align-items: center;
+        }
+    </style>
+</head>
+
+
+<body>
+
+    <div class="nav-container">
+        <ul>
+            <li><a href="{% url 'home' %}">Home</a></li>
+            <li><a href="{% url 'predictor' %}">Services</a></li>
+            <li><a href="{% url  'about' %}">About</a></li>
+            <li><a href="{% url 'contact' %}">Contact</a></li>
+        </ul>
+    </div>
+
+    <h1>About</h1>
+
+
+
+
+</body>
+
+</html>
