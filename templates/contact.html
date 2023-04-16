@@ -13,180 +13,56 @@
     <script src="{% static 'bootstrap/bootstrap.min.js' %}"></script>
 
     <style>
-        body {
-            line-height: 0.5;
-            background-image: url(../static/images/crp.jpg);
-            background-size: cover;
-            background-repeat: no-repeat;
-            background-position: center center;
-            background-attachment: fixed;
-
-            /* adjust this value to create space for the navbar */
-        }
-
-
-
-
-        /* style for nav */
-        nav {
-            background-color: #333;
-            overflow: overlay;
-            padding: 0;
-            height: auto;
-        }
-
-        nav ul {
-            list-style-type: none;
-            margin: 0;
-            padding: 0;
-        }
-
-        nav li {
-            float: left;
-        }
-
-        nav li a {
-            display: inline-block;
-            color: white;
-            text-align: right;
-            padding: 14px 16px;
-            text-decoration: none;
-        }
-
-        nav li a:hover {
-            background-color: #111;
+        /* Styles for desktop screens */
+        .nav-wrapper {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
         }
 
         .nav-container {
-            text-align: center;
-            background-color: #333;
-            padding: 16px;
-        }
-
-        .nav-container ul {
+            display: flex;
             list-style: none;
-            padding: 0;
-            margin: 0;
         }
 
         .nav-container li {
-            display: inline-block;
-            margin-right: 20px;
+            margin: 0 10px;
         }
 
-        .nav-container li:last-child {
-            margin-right: 0;
+        .nav-container li a {
+            text-decoration: none;
+            color: #000;
         }
 
+        /* Styles for mobile screens */
         @media (max-width: 768px) {
-            body {
-                line-height: 1.2;
+            .nav-wrapper {
+                flex-direction: column;
+                align-items: flex-start;
             }
 
             .nav-container {
-                text-align: right;
+                display: none;
+                position: absolute;
+                top: 50px;
+                left: 0;
+                width: 100%;
+                background-color: #fff;
+                padding: 10px;
+            }
+
+            .nav-container.show {
+                display: flex;
+                flex-direction: column;
             }
 
             .nav-container li {
-                display: block;
                 margin: 10px 0;
             }
 
-            nav-container ul {
-                display: inline-block;
+            .nav-toggle {
+                display: block;
             }
-        }
-
-        h5 {
-            text-align: center;
-            margin-top: 30px;
-            margin-bottom: auto;
-        }
-
-        h1 {
-            text-align: center;
-            margin-top: 20px;
-        }
-
-        h3 {
-            text-align: center;
-            margin-top: 10px;
-        }
-
-
-
-        .container {
-            margin-top: 40px;
-        }
-
-
-        /* service boxes */
-        .services-container {
-            display: flex;
-            justify-content: space-between;
-            flex-wrap: wrap;
-            max-width: 700px;
-            margin: 0 auto;
-            padding: 10px;
-
-        }
-
-        .service-box {
-            width: 45%;
-            max-width: 500px;
-            margin-bottom: 20px;
-            border: 1px solid #ccc;
-            border-radius: 20px;
-            padding: 17px;
-            text-align: center;
-            background-color: white;
-        }
-
-        @media (max-width: 500px) {
-            .service-box {
-                width: 200px;
-                white-space: nowrap;
-                overflow: hidden;
-                text-overflow: ellipsis;
-                width: 500px;
-            }
-
-            .service-box p {
-                font-size: 5px;
-            }
-
-        }
-
-        @media (max-width: 500px) {
-            .service-box {
-                width: 200px;
-                white-space: nowrap;
-                overflow: hidden;
-                text-overflow: ellipsis;
-                width: 500px;
-            }
-
-            .service-box p {
-                font-size: 5px;
-                line-height: 1.5;
-            }
-        }
-
-
-        .service-box img {
-            width: 100%;
-            height: auto;
-            margin-bottom: 10px;
-        }
-
-        .service-box h2 {
-            font-size: 24px;
-            margin-bottom: 10px;
-        }
-
-        .service-box p {
-            font-size: 16px;
-            line-height: 1.5;
         }
     </style>
 </head>
@@ -194,6 +70,7 @@
 
 <body>
 
+    <button class="nav-toggle">Menu</button>
     <div class="nav-container">
         <ul>
             <li><a href="{% url 'home' %}">Home</a></li>
@@ -202,6 +79,14 @@
             <li><a href="{% url  'contact' %}">Contact</a></li>
         </ul>
     </div>
+    <script>
+        const toggleButton = document.querySelector('.nav-toggle');
+        const navContainer = document.querySelector('.nav-container');
+
+        toggleButton.addEventListener('click', function () {
+            navContainer.classList.toggle('show');
+        });
+    </script>
 
 
 
@@ -209,30 +94,6 @@
 
     <h1>Our Services</h1>
 
-    <!-- Add this code anywhere in the body -->
-    <div class="services-container">
-        <div class="service-box">
-            <img src="../static/images/cropservice.jpeg" alt="Crop Service">
-            <a href="{% url  'predictor' %}">
-                <h2>Crop Recommendation System</h2>
-            </a>
-            <p>Our crop service helps farmers to determine the best crops to plant based on their soil type,
-                and climate. <br> We provide personalized crop recommendations that help farmers maximize their yields
-                and
-                profits..</p>
-        </div>
-        <div class="service-box">
-            <img src="../static/images/desease.jpg" alt="Disease Detection Service">
-            <a href="{% url 'plantde'%}">
-                <h2>Disease Detection System</h2>
-            </a>
-
-            <p>Our disease detection system uses advanced image recognition technology to identify crop diseases.
-
-                With our service,farmers can quickly identify and address crop
-                issues, minimizing crop losses and maximizing yields</p>
-        </div>
-    </div>
 
 
 
