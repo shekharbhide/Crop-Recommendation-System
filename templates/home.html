@@ -85,9 +85,9 @@
             width: 7%;
         }
 
-        /* @media (max-width: 768px) {
+        @media (max-width: 768px) {
 
-             body {
+            body {
                 line-height: 1.2;
             }
 
@@ -96,44 +96,12 @@
                 margin: 10px 0;
                 float: right;
                 padding-left: 10px;
-            } 
-            
+            }
+
         }
-         */
 
-        @media (max-width: 767px) {
-            .nav-menu {
-                display: none;
-                position: absolute;
-                top: 100%;
-                left: 0;
-                width: 100%;
-                background-color: #333;
-                padding: 16px;
-            }
 
-            .nav-menu li {
-                display: block;
-                margin-bottom: 10px;
-            }
 
-            .nav-menu a {
-                display: block;
-                color: white;
-                text-align: center;
-                text-decoration: none;
-                padding: 10px;
-            }
-
-            .mobile-menu-icon {
-                display: block;
-                position: absolute;
-                top: 0;
-                right: 0;
-                padding: 16px;
-                cursor: pointer;
-            }
-        }
 
         h5 {
             text-align: center;
@@ -171,19 +139,7 @@
         </ul>
     </div>
 
-    <div class="nav-container">
-        <div class="mobile-menu-icon">
-            <span class="menu-line"></span>
-            <span class="menu-line"></span>
-            <span class="menu-line"></span>
-        </div>
-        <ul class="nav-menu">
-            <li><a href="{% url 'home' %}">Home</a></li>
-            <li><a href="{% url 'predictor' %}">Services</a></li>
-            <li><a href="#">About</a></li>
-            <li><a href="#">Contact</a></li>
-        </ul>
-    </div>
+
 
     <h1>Our Services</h1>
     <div class="container">
