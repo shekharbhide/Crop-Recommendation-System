@@ -27,5 +27,10 @@ The methodology for   ML model for analyzing crop plantation in suitable conditi
 
 Model evaluation: After training the model, it is evaluated for its performance in predicting crop growth in different environmental conditions.
 
-Model deployment: We've deployed our ML model on website using Django Framework
+Model deployment: We've integrated our ML model  on website using Django Framework and deployed on Google Cloud used AMD instance
+
+# Result 
+Demo Video
+
+
 
