@@ -99,13 +99,13 @@
 
         h5 {
             text-align: center;
-            margin-top: 60px;
+            margin-top: 30px;
             margin-bottom: auto;
         }
 
         h1 {
             text-align: center;
-            margin-top: 90px;
+            margin-top: 20px;
         }
 
         h3 {
@@ -117,6 +117,45 @@
 
         .container {
             margin-top: 40px;
+        }
+
+
+        /* service boxes */
+        .services-container {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            max-width: 700px;
+            margin: 0 auto;
+            padding: 10px;
+
+        }
+
+        .service-box {
+            width: 45%;
+            max-width: 500px;
+            margin-bottom: 20px;
+            border: 1px solid #ccc;
+            border-radius: 20px;
+            padding: 17px;
+            text-align: center;
+            background-color: white;
+        }
+
+        .service-box img {
+            width: 100%;
+            height: auto;
+            margin-bottom: 10px;
+        }
+
+        .service-box h2 {
+            font-size: 24px;
+            margin-bottom: 10px;
+        }
+
+        .service-box p {
+            font-size: 16px;
+            line-height: 1.5;
         }
     </style>
 </head>
@@ -133,49 +172,51 @@
         </ul>
     </div>
 
+
+
+
+
     <h1>Our Services</h1>
-    <div class="container">
 
-        <div class="row">
+    <!-- Add this code anywhere in the body -->
+    <div class="services-container">
+        <div class="service-box">
+            <img src="../static/images/cropservice.jpeg" alt="Crop Service">
+            <a href="{% url  'predictor' %}">
+                <h2>Crop Recommendation System</h2>
+            </a>
+            <p>Our crop service helps farmers to determine the best crops to plant based on their soil type,
+                and climate. <br> We provide personalized crop recommendations that help farmers maximize their yields
+                and
+                profits..</p>
+        </div>
+        <div class="service-box">
+            <img src="../static/images/desease.jpg" alt="Disease Detection Service">
+            <a href="{% url 'plantde'%}">
+                <h2>Disease Detection System</h2>
+            </a>
 
-            <div class="col-sm-12 col-md-6">
-                <div class="service-box">
+            <p>Our disease detection system uses advanced image recognition technology to identify crop diseases.
 
-                    <h3>Crop Recommendation</h3>
-
-                    <div class="text-center">
-                        <p>
-                            Recommendation of best Crop which you should grow in your farm
-                        </p>
-                        <!--   <a href="{% url 'predictor' %}">Checkout</a> -->
-                        <button class="btn" onclick="location.href='{% url 'predictor' %}'">Checkout</button>
-
-                    </div>
-                </div>
-            </div>
-
-            <br>
-            <div class="col-sm-12 col-md-6">
-                <div class="service-box">
-                    <h3>Plant Disease Detector</h3>
-                    <div class="text-center">
-                        <p> Predicting the name and causes of crop disease
-
-                        </p>
-
-                        <button class="btn" onclick="location.href='{% url 'plantde' %}'">Checkout</button>
-
-                    </div>
-
-                </div>
-            </div>
-
+                With our service, farmers can quickly identify and address crop
+                issues, minimizing crop losses and maximizing yields</p>
         </div>
     </div>
-    <!-- Add this code anywhere in the body -->
 
 
 
 </body>
 
 </html>
+
+<!-- 
+    </p>
+        </div>
+        <div class="service-box">
+            <img src="../static/images/desease.jpg" alt="Disease Image">
+            <h2>Disease Detection</h2>
+            <p>Our disease detection service uses advanced image recognition technology to identify crop diseases and
+                provide recommendations for treatment. With our service, farmers can quickly identify and address crop
+                issues, minimizing crop losses and maximizing yields.</p>
+        </div>
+ -->
