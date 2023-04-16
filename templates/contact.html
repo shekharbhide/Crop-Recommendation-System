@@ -13,56 +13,105 @@
     <script src="{% static 'bootstrap/bootstrap.min.js' %}"></script>
 
     <style>
-        /* Styles for desktop screens */
-        .nav-wrapper {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
+        body {
+
+
+
+            /* adjust this value to create space for the navbar */
+        }
+
+
+
+
+        /* style for nav */
+        nav {
+            background-color: #333;
+            overflow: overlay;
+            padding: 0;
+            height: auto;
+        }
+
+        nav ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+        }
+
+        nav li {
+            float: left;
+        }
+
+        nav li a {
+            display: inline-block;
+            color: white;
+            text-align: right;
+            padding: 14px 16px;
+            text-decoration: none;
+        }
+
+        nav li a:hover {
+            background-color: #111;
         }
 
         .nav-container {
-            display: flex;
+            text-align: center;
+            background-color: #333;
+            padding: 16px;
+        }
+
+        .nav-container ul {
             list-style: none;
+            padding: 0;
+            margin: 0;
         }
 
         .nav-container li {
-            margin: 0 10px;
+            display: inline-block;
+            margin-right: 20px;
         }
 
-        .nav-container li a {
-            text-decoration: none;
-            color: #000;
+        .nav-container li:last-child {
+            margin-right: 0;
         }
 
-        /* Styles for mobile screens */
         @media (max-width: 768px) {
-            .nav-wrapper {
-                flex-direction: column;
-                align-items: flex-start;
+            body {
+                line-height: 1.2;
             }
 
             .nav-container {
-                display: none;
-                position: absolute;
-                top: 50px;
-                left: 0;
-                width: 100%;
-                background-color: #fff;
-                padding: 10px;
-            }
-
-            .nav-container.show {
-                display: flex;
-                flex-direction: column;
+                text-align: right;
             }
 
             .nav-container li {
+                display: block;
                 margin: 10px 0;
             }
 
-            .nav-toggle {
-                display: block;
+            nav-container ul {
+                display: inline-block;
             }
+        }
+
+
+        p {
+            padding: auto;
+            ;
+        }
+
+
+        h1 {
+            text-align: center;
+        }
+
+        p {
+            color: #333;
+            font-family: Arial, sans-serif;
+            font-size: 17px;
+            line-height: 1;
+            text-align: justify;
+            padding: 3px;
+            margin: 13px 34px;
         }
     </style>
 </head>
@@ -70,7 +119,6 @@
 
 <body>
 
-    <button class="nav-toggle">Menu</button>
     <div class="nav-container">
         <ul>
             <li><a href="{% url 'home' %}">Home</a></li>
@@ -79,36 +127,57 @@
             <li><a href="{% url  'contact' %}">Contact</a></li>
         </ul>
     </div>
-    <script>
-        const toggleButton = document.querySelector('.nav-toggle');
-        const navContainer = document.querySelector('.nav-container');
-
-        toggleButton.addEventListener('click', function () {
-            navContainer.classList.toggle('show');
-        });
-    </script>
 
 
 
 
 
-    <h1>Our Services</h1>
+    <h1>About </h1>
+
+    <!-- Add this code anywhere in the body -->
+    <h3>Introduction</h3>
+    <section class="intro">
+        <p>"We, Team Aimers, are introducing our project "Crop Recommendation System". Our system aims to revolutionize
+            the agricultural industry by leveraging the power of new technologies such as data science and machine
+            learning to help farmers with crop recommendations."
+        </p>
+    </section>
+
+    <h3>Challanges</h3>
+    <section class="challanges">
+        <p>Farmers face the challenge of determining which crop to plant in a particular soil based on its ingredients.
+            Different crops have different requirements for soil characteristics such as pH level, nutrient content like
+            N,P,K, humidity ,temperature and moisture retention capacity. </p>
+        <p>
+            If a farmer chooses the wrong crop for their soil type, the crop may not grow well, leading to low yield and
+            reduced profitability. Additionally, planting the wrong crop in a soil type can lead to soil degradation,
+            reducing its fertility for future crops
+        </p>
+        <p>
+            Hence, it is crucial for farmers to select the right crop for their soil type to maximize yield and maintain
+            soil health. A Crop Recommendation System can assist farmers in making informed decisions by analyzing soil
+            characteristics and providing recommendations for the most suitable crops
+        </p>
+    </section>
+    <h3>Solution we're providing</h3>
+    <section class="solution">
+        <p>
+            Through extensive research and analysis, we have developed an intelligent Machine Learning algorithm that
+            takes various input
+            of
+            soil condition such as Nitrogen, Potassium, Phosphorus and another parameters such as
+            temperature,humidity,pH
+            and rainfall. And model suggest the most suitable crops for a given farm. Our system not only increases crop
+            yield and profitability but also promotes sustainable farming practices.
+        </p>
+    </section>
 
 
 
 
 </body>
 
-</html>
 
-<!-- 
-    </p>
-        </div>
-        <div class="service-box">
-            <img src="../static/images/desease.jpg" alt="Disease Image">
-            <h2>Disease Detection</h2>
-            <p>Our disease detection service uses advanced image recognition technology to identify crop diseases and
-                provide recommendations for treatment. With our service, farmers can quickly identify and address crop
-                issues, minimizing crop losses and maximizing yields.</p>
-        </div>
- -->
+
+
+</html>
