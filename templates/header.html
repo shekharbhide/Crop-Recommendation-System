@@ -1,0 +1,161 @@
+{% load static%}
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link rel="stylesheet" href="{% static 'bootstrap/bootstrap.min.css' %}">
+
+
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            background-color: #f8f8f8;
+            color: #333;
+        }
+
+        header {
+            background-color: lime;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            z-index: 999;
+        }
+
+        .nav-container {
+            max-width: 980px;
+            margin: 0 auto;
+            padding: -7px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 24px;
+            font-weight: bold;
+            text-transform: uppercase;
+            color: #333;
+            text-decoration: none;
+        }
+
+        .logo:hover {
+            color: #555;
+        }
+
+        .nav {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+        }
+
+        .nav li {
+            margin-right: 20px;
+            position: relative;
+        }
+
+        .nav li:last-child {
+            margin-right: 0;
+        }
+
+        .nav a {
+            display: initial;
+            padding: 10px;
+            color: #333;
+            text-decoration: none;
+            transition: all 0.2s ease-in-out;
+        }
+
+        .nav a:hover {
+            background-color: #333;
+            color: #fff;
+        }
+
+        .nav-dropdown {
+            position: absolute;
+            top: 100%;
+            left: 0;
+            background-color: #fff;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            display: none;
+        }
+
+        .nav-dropdown li {
+            margin: 0;
+            padding: 10px;
+            border-bottom: 1px solid #eee;
+        }
+
+        .nav-dropdown li:last-child {
+            border-bottom: none;
+        }
+
+        .nav li:hover .nav-dropdown {
+            display: block;
+        }
+
+        /* Responsive styles */
+        @media screen and (max-width: 768px) {
+            .nav-container {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+
+            .logo {
+                margin-bottom: 10px;
+            }
+
+            .nav {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+
+            .nav li {
+                margin-right: 0;
+                margin-bottom: 10px;
+            }
+
+            .nav li:last-child {
+                margin-bottom: 0;
+            }
+
+            .nav-dropdown {
+                position: static;
+                display: none;
+            }
+
+            .nav li:hover .nav-dropdown {
+                display: block;
+                position: static;
+                background-color: #fff;
+                box-shadow: none;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <div class="nav-container">
+            <a href="/" class="logo">My Website</a>
+
+            <nav>
+                <ul class="nav">
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">Services</a>
+                        <ul class="nav-dropdown">
+                            <li><a href="{% url 'predictor' %}">Crop Recommendation</a></li>
+                            <li><a href="{% url 'plantde' %}">Plant Desease Det</a></li>
+
+                        </ul>
+                    </li>
+                    <li><a href="#">About</a></li>
+                    <li><a href="#">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>

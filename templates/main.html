@@ -20,46 +20,7 @@
             background-attachment: fixed;
         }
 
-        .container {
-            margin-top: 30px;
-            padding: 20px;
-            background-color: #fff;
-            box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.2);
-            border-radius: 5px;
-            max-width: 500px;
-            width: 100%;
-            margin-left: auto;
-            margin-right: auto;
-        }
-
-        h1 {
-            text-align: center;
-            margin-top: 20px;
-        }
-
-        .form-control {
-            height: 30px;
-            font-size: 14px;
-        }
-
-        .btn-primary {
-            align-items: center;
-        }
-
-        label {
-            font-weight: 500;
-        }
-
-        .btn-primary {
-            color: #fff;
-            background-color: #007bff;
-            border-color: #007bff;
-            padding: 5px 30px;
-            font-size: large;
-            font-weight: 600;
-        }
-
-        /* design for nav bar*/
+        /*style for nav */
         nav {
             background-color: #333;
             overflow: overlay;
@@ -116,20 +77,77 @@
         li {
             width: 7%;
         }
+
+        @media only screen and (max-width: 600px) {
+            .nav-container {
+                flex-direction: column;
+            }
+
+            ul {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            li {
+                margin: 10px 0;
+            }
+        }
+
+
+        .container {
+            margin-top: 30px;
+            padding: 20px;
+            background-color: #fff;
+            box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.2);
+            border-radius: 5px;
+            max-width: 500px;
+            width: 100%;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        h1 {
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        .form-control {
+            height: 30px;
+            font-size: 14px;
+        }
+
+        .btn-primary {
+            align-items: center;
+        }
+
+        label {
+            font-weight: 500;
+        }
+
+        .btn-primary {
+            color: #fff;
+            background-color: #007bff;
+            border-color: #007bff;
+            padding: 5px 30px;
+            font-size: large;
+            font-weight: 600;
+        }
     </style>
 </head>
+<div class="nav-container">
+    <ul>
+        <li><a href="{% url 'home' %}">Home</a></li>
+        <li><a href="{% url 'predictor' %}">Services</a></li>
+        <li><a href="#">About</a></li>
+        <li><a href="#">Contact</a></li>
+    </ul>
+</div>
+
 
 
 <body>
 
-    <div class="nav-container">
-        <ul>
-            <li><a href="{% url 'home' %}">Home</a></li>
-            <li><a href="{% url 'predictor' %}">Services</a></li>
-            <li><a href="#">About</a></li>
-            <li><a href="#">Contact</a></li>
-        </ul>
-    </div>
+
     <h1>Crop Recommendation System</h1>
     <hr>
     <div class="container">
