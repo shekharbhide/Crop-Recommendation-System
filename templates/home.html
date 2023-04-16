@@ -86,7 +86,8 @@
         }
 
         @media (max-width: 768px) {
-            body {
+
+            /* body {
                 line-height: 1.2;
             }
 
@@ -94,11 +95,26 @@
                 display: block;
                 margin: 10px 0;
                 float: right;
+                padding-left: 10px;
+            } */
+            .nav-container {
+                justify-content: center;
+                padding: 16px 0;
             }
 
-            .nav-container {
-                padding: 16px 32px 16px 0;
+            .nav-container ul {
+                justify-content: center;
             }
+
+            .nav-container li {
+                margin-right: 10px;
+                margin-left: 10px;
+            }
+
+            .nav-container li:first-child {
+                margin-left: 0;
+            }
+
         }
 
         h5 {
