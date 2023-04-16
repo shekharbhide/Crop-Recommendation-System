@@ -209,6 +209,68 @@
         .row {
             place-content: center;
         }
+
+
+        .start {
+            background-color: #f8f8f8;
+            padding: 40px;
+            border: 1px solid#ccc;
+
+        }
+
+        h3 {
+            font-size: 24px;
+            font-weight: bold;
+            color: #333;
+            margin-bottom: 0;
+        }
+
+        p {
+            font-size: 16px;
+            color: #666;
+            margin-bottom: 0;
+            text-align: center;
+        }
+
+        h5 {
+            font-size: 18px;
+            font-weight: bold;
+            color: #333;
+            margin-bottom: 0px;
+        }
+
+        .start {
+            overflow: hidden;
+            /* add clearfix hack to contain floated images */
+        }
+
+        .start img.left {
+            float: left;
+            margin-right: 20px;
+            /* add some spacing between images */
+            margin-right: 30px;
+            /* add some spacing between images */
+            max-width: 30%;
+            /* set a maximum width for the image */
+            height: auto;
+        }
+
+        .start img.right {
+            float: right;
+            margin-left: 20px;
+            /* add some spacing between images */
+            margin-left: 30px;
+            /* add some spacing between images */
+            max-width: 30%;
+            /* set a maximum width for the image */
+            height: auto;
+            /* set height to auto to maintain aspect ratio */
+        }
+
+
+        h6 {
+            align-items: center;
+        }
     </style>
 </head>
 
@@ -224,6 +286,20 @@
         </ul>
     </div>
 
+
+    <div class="start">
+        <img src="../static/images/s4.jpg" alt="left image" class="left">
+        <img src="../static/images/peek.jpg" alt="right image" class="right">
+        <h3>Welcome to Crop Recommendation System</h3>
+        <p>Here are some questions you might have:</p>
+        <h5>Which crop should be cultivated in farm? <br>
+            Which disease is affecting your crop?
+        </h5>
+        <h5> <br>
+            Don't worry, Explore our services!!
+        </h5>
+        <h6></h6>
+    </div>
 
 
 
