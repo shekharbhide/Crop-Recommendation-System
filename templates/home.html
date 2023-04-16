@@ -267,6 +267,18 @@
             /* set height to auto to maintain aspect ratio */
         }
 
+        @media screen and (max-width: 600px) {
+
+            .start img.left,
+            .start img.right {
+                float: none;
+                /* remove float on smaller screens */
+                max-width: 100%;
+                /* set max width to 100% to fill container */
+                margin: 10px auto;
+                /* add some spacing and center align */
+            }
+        }
 
         h6 {
             align-items: center;
