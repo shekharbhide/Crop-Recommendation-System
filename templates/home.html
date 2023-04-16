@@ -14,7 +14,7 @@
 
     <style>
         body {
-            line-height: 0.5;
+            line-height: 1;
             background-image: url(../static/images/bg1.jpeg);
             background-size: cover;
             background-repeat: no-repeat;
@@ -188,6 +188,27 @@
             font-size: 16px;
             line-height: 1.5;
         }
+
+        /*footer*/
+        .footer-container {
+            background-color: #333;
+            color: white;
+
+        }
+
+        h4 {
+            color: #007bff;
+        }
+
+        .col-sm-4 {
+            padding: 16px 70px;
+            margin: 0px 102px;
+            text-align: center;
+        }
+
+        .row {
+            place-content: center;
+        }
     </style>
 </head>
 
@@ -199,7 +220,7 @@
             <li><a href="{% url 'home' %}">Home</a></li>
             <li><a href="{% url 'predictor' %}">Services</a></li>
             <li><a href="{% url  'about' %}">About</a></li>
-            <li><a href="{% url  'contact' %}">Contact</a></li>
+            <li><a href="#">Contact</a></li>
         </ul>
     </div>
 
@@ -235,6 +256,25 @@
     </div>
 
 
+
+    <footer>
+        <div class="footer-container">
+            <div class="row">
+                <div class="col-sm-4">
+                    <h4>About Us</h4>
+                    <p>
+                        Group - Aimers <br>
+                        Sanjivani College of Engineering,Kopargaon
+                    </p>
+
+                    <p>
+                        &COPY; scoe 2023
+                    </p>
+                </div>
+
+            </div>
+        </div>
+    </footer>
 
 </body>
 
