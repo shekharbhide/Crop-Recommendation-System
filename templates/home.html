@@ -24,6 +24,9 @@
             /* adjust this value to create space for the navbar */
         }
 
+
+
+
         /* style for nav */
         nav {
             background-color: #333;
@@ -80,6 +83,17 @@
 
         li {
             width: 7%;
+        }
+
+        @media (max-width: 768px) {
+            body {
+                line-height: 1.2;
+            }
+
+            .nav-container li {
+                display: block;
+                margin: 10px 0;
+            }
         }
 
         h5 {
