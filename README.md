@@ -24,9 +24,12 @@ The methodology for   ML model for analyzing crop plantation in suitable conditi
 4.Model training: We've trained machine learning model  on the data.We've used  algorithms  such as decision trees, random forest, support vector machines, etc.
 
 ### Tech Used
-- George Washington
-* John Adams
-+ Thomas Jefferson
+- Sklearn
+- 
+- Django Web Framework
+- HTML
+- CSS
+
 
 
 
