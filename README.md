@@ -40,7 +40,7 @@ The methodology for   ML model for analyzing crop plantation in suitable conditi
   <img src="https://pandas.pydata.org/static/img/pandas.svg" alt="Pandas" height="50" hspace="10"/>
   <img src="https://matplotlib.org/stable/_static/logo2_compressed.svg" alt="Matplotlib" height="50" hspace="10"/>
   <img src="https://scikit-learn.org/stable/_static/scikit-learn-logo-small.png" alt="Scikit-Learn" height="50" hspace="10"/>
-    <img src="[https://scikit-learn.org/stable/_static/scikit-learn-logo-small.png](https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/git/git.png)" alt="Git" height="50" hspace="10"/>
+    <img src="https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/git/git.png" alt="Git" height="50" hspace="10"/>
   
 </p>
 
@@ -51,6 +51,7 @@ The methodology for   ML model for analyzing crop plantation in suitable conditi
 
 # Result 
 Demo Video
+[Click here to Watch Demo Video](https://drive.google.com/file/d/16zKKdwecARwoYwWL4uxNC-d15mrfCZwF/view?usp=share_link)
 
 
 
