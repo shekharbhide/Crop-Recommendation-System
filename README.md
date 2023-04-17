@@ -24,7 +24,7 @@ The methodology for   ML model for analyzing crop plantation in suitable conditi
 4.Model training: We've trained machine learning model  on the data.We've used  algorithms  such as decision trees, random forest, support vector machines, etc.
 
 ### Tech Used
-![Screenshot of a comment on a GitHub issue showing an image, added in the Markdown, of an Octocat smiling and raising a tentacle.](https://myoctocat.com/assets/images/base-octocat.svg)
+![Screenshot of a comment on a GitHub issue showing an image, added in the Markdown, of an Octocat smiling and raising a tentacle.]()
 
 
 
