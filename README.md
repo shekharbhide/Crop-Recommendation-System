@@ -36,7 +36,7 @@ The methodology for   ML model for analyzing crop plantation in suitable conditi
   <img src="https://upload.wikimedia.org/wikipedia/commons/3/3d/CSS.3.svg" alt="CSS" height="50" hspace="10"/>
   <img src="https://upload.wikimedia.org/wikipedia/commons/6/6a/JavaScript-logo.png" alt="JavaScript" height="50" hspace="10"/>
   <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b2/Bootstrap_logo.svg/2560px-Bootstrap_logo.svg.png" alt="Bootstrap" height="50" hspace="10"/>
-  <img src="[https://numpy.org/images/logos/numpy.svg](https://raw.githubusercontent.com/numpy/numpy/7e7f4adab814b223f7f917369a72757cd28b10cb/branding/icons/numpylogo.svg)" alt="NumPy" height="50" hspace="10"/>  <br/>
+  <img src="https://raw.githubusercontent.com/numpy/numpy/7e7f4adab814b223f7f917369a72757cd28b10cb/branding/icons/numpylogo.svg" alt="NumPy" height="50" hspace="10"/>  <br/>
   <img src="https://pandas.pydata.org/static/img/pandas.svg" alt="Pandas" height="50" hspace="10"/>
   <img src="https://matplotlib.org/stable/_static/logo2_compressed.svg" alt="Matplotlib" height="50" hspace="10"/>
   <img src="https://scikit-learn.org/stable/_static/scikit-learn-logo-small.png" alt="Scikit-Learn" height="50" hspace="10"/>
