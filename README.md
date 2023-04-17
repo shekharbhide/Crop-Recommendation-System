@@ -24,7 +24,9 @@ The methodology for   ML model for analyzing crop plantation in suitable conditi
 4.Model training: We've trained machine learning model  on the data.We've used  algorithms  such as decision trees, random forest, support vector machines, etc.
 
 ### Tech Used
-![Screenshot of a comment on a GitHub issue showing an image, added in the Markdown, of an Octocat smiling and raising a tentacle.](https://www.google.com/search?q=django+framework+django+logo&tbm=isch&ved=2ahUKEwicv7q3_bD-AhWixXMBHReaBrQQ2-cCegQIABAA&oq=django+fr&gs_lcp=CgNpbWcQARgBMgsIABCABBCxAxCDATIFCAAQgAQyBQgAEIAEMgUIABCABDIFCAAQgAQyBQgAEIAEMgUIABCABDIFCAAQgAQyBQgAEIAEMgUIABCABDoECCMQJzoKCAAQigUQsQMQQzoHCAAQigUQQzoNCAAQigUQsQMQgwEQQ1D_BVjdEmDvIWgAcAB4AIAB-QKIAb4HkgEHMC4xLjIuMZgBAKABAaoBC2d3cy13aXotaW1nwAEB&sclient=img&ei=AUQ9ZNy6GaKLz7sPl7SaoAs&bih=625&biw=1366#imgrc=WYta0i2vWH13iM)
+- George Washington
+* John Adams
++ Thomas Jefferson
 
 
 
