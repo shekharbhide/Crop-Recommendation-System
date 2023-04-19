@@ -20,21 +20,21 @@ def predictor(request):
 
 def formInfo(request):
     context = {}
-    if request.method == 'GET':
-        N = float(request.GET['N'])
-        P = float(request.GET['P'])
-        K = float(request.GET['K'])
-        T = float(request.GET['T'])
-        H = float(request.GET['H'])
-        Ph = float(request.GET['Ph'])
-        R = float(request.GET['R'])
+    if request.method == 'POST':
+        N = float(request.POST.get('N'))
+        P = float(request.POST.get('P'))
+        K = float(request.POST.get('K'))
+        T = float(request.POST.get('T'))
+        H = float(request.POST.get('H'))
+        Ph = float(request.POST.get('Ph'))
+        R = float(request.POST.get('R'))
 
     y_pred = model.predict([[N, P, K, T, H, Ph, R]])
-  #  print(y_pred)
-
+    print(y_pred)
     context = {
-        'crop_result': "Crop Recommended :  "+y_pred[0]
+        'crop_result': "Crop Recommended: " + y_pred[0]
     }
+
     return render(request, 'main.html', context)
 
 

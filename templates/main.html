@@ -180,7 +180,8 @@
     <hr>
     <div class="container">
 
-        <form action="crop_result">
+        <form action="crop_result" method="post">
+            {% csrf_token %}
             <div class="form-group">
                 <label for="N">Enter ratio of Nitrogen </label>
                 <input type="number" required step="any" class="form-control" id="N" name="N"
