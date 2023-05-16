@@ -53,5 +53,5 @@ The methodology for   ML model for analyzing crop plantation in suitable conditi
 ## Demo Video 
 [Click here to Watch Demo Video](https://drive.google.com/file/d/16zKKdwecARwoYwWL4uxNC-d15mrfCZwF/view?usp=share_link)
 
-<https://drive.google.com/file/d/16zKKdwecARwoYwWL4uxNC-d15mrfCZwF/view>
+
 

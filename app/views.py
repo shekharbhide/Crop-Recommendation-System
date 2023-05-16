@@ -4,7 +4,7 @@ from django.shortcuts import render
 
 # render Home Page
 def home(request):
-    return render(request, 'home.html')
+    return render(request, 'index.html')
 
 
 # loading our ML model
@@ -15,7 +15,7 @@ with open('./saved_models/RandomForest.pkl', 'rb') as file:
 
 
 def predictor(request):
-    return render(request, 'main.html')
+    return render(request, 'crop.html')
 
 
 def formInfo(request):
@@ -35,7 +35,7 @@ def formInfo(request):
         'crop_result': "Crop Recommended: " + y_pred[0]
     }
 
-    return render(request, 'main.html', context)
+    return render(request, 'crop.html', context)
 
 
 def plantde(request):

@@ -1,0 +1,61 @@
+{% extends 'base.html '%}
+{% load static %}
+
+{% block content %}
+<title>Crop Recommendation System</title>
+<link rel="stylesheet" href="{% static 'CSS/crop.css' %}">
+
+
+<h1 style="text-align: center">Crop Recommendation System</h1>
+
+<div class="container-crp-crop">
+
+    <form action="crop_result" method="post">
+        {% csrf_token %}
+        <div class="crop-form-group">
+            <label for="N">Enter ratio of Nitrogen </label>
+            <input type="number" required step="any" class="form-control" id="N" name="N"
+                placeholder="Enter Nitrogen(N) Value e.g 56">
+        </div>
+        <div class="crop-form-group">
+            <label for="P">Enter ratio of Phosphorus</label>
+            <input type="number" required step="any" class="form-control" id="P" name="P"
+                placeholder="Enter Phosphorus(P) Value e.g 65">
+        </div>
+        <div class="crop-form-group">
+            <label for="K">Enter ratio of Potassium</label>
+            <input type="number" required step="any" class="form-control" id="K" name="K"
+                placeholder="Enter Potassium(K) Value  e.g 73">
+        </div>
+        <div class="crop-form-group">
+            <label for="T">Enter average Temperature value around the field</label>
+            <input type="number" required step="any" class="form-control" id="T" name="T"
+                placeholder="Enter Temperature Value in  e.g 25 ">
+        </div>
+        <div class="crop-form-group">
+            <label for="H">Enter average Humidity value around the field</label>
+            <input type="number" required step="any" class="form-control" id="H" name="H"
+                placeholder="Enter Humidity Value e.g 78 ">
+        </div>
+        <div class="crop-form-group">
+            <label for="Ph">Enter pH Value of the soil</label>
+            <input type="number" required step="any" class="form-control" id="Ph" name="Ph"
+                placeholder="Enter Ph Value e.g 6">
+        </div>
+        <div class="crop-form-group">
+            <label for="R">Enter average amount of Rainfall around the field</label>
+            <input type="number" required step="any" class="form-control" id="R" name="R"
+                placeholder="Enter Rainfall Value e.g 189">
+        </div>
+
+        <button type="submit" class="btn btn-purple text-white">Predict</button>
+    </form>
+
+</div>
+
+{% if crop_result %}
+<div class="crop-result">{{ crop_result }}</div>
+{% endif %}
+
+
+{% endblock %}

@@ -1,0 +1,280 @@
+{% extends 'base.html '%}
+{% load static %}
+
+{% block content %}
+<title>Home Page CRS</title>
+<link rel="stylesheet" href="{% static 'CSS/homePage.css' %}">
+
+<h2 style="text-align: center">Our Services</h2>
+
+
+
+{% endblock %}
+
+
+
+
+
+<!-- 
+
+
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Home Page CRS</title>
+    <link rel="stylesheet" href="{% static 'bootstrap/bootstrap.min.css' %}">
+    <script src="{% static 'bootstrap/bootstrap.min.js' %}"></script>
+
+    <style>
+       
+
+        h5 {
+            text-align: center;
+            margin-top: 30px;
+            margin-bottom: auto;
+        }
+
+        h1 {
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        h3 {
+            text-align: center;
+            margin-top: 10px;
+        }
+
+
+
+        .container {
+            margin-top: 40px;
+        }
+
+
+        /* service boxes */
+        .services-container {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            max-width: 700px;
+            margin: 0 auto;
+            padding: 10px;
+
+        }
+
+        .service-box {
+            width: 45%;
+            max-width: 500px;
+            margin-bottom: 20px;
+            border: 1px solid #ccc;
+            border-radius: 20px;
+            padding: 17px;
+            text-align: center;
+            background-color: white;
+        }
+
+        @media (max-width: 500px) {
+            .service-box {
+                width: 200px;
+                white-space: nowrap;
+                overflow: hidden;
+                text-overflow: ellipsis;
+                width: 500px;
+            }
+
+            .service-box p {
+                font-size: 5px;
+            }
+
+        }
+
+        @media (max-width: 500px) {
+            .service-box {
+                width: 200px;
+                white-space: nowrap;
+                overflow: hidden;
+                text-overflow: ellipsis;
+                width: 500px;
+            }
+
+            .service-box p {
+                font-size: 5px;
+                line-height: 1.5;
+            }
+        }
+
+
+        .service-box img {
+            width: 100%;
+            height: auto;
+            margin-bottom: 10px;
+        }
+
+        .service-box h2 {
+            font-size: 24px;
+            margin-bottom: 10px;
+        }
+
+        .service-box p {
+            font-size: 16px;
+            line-height: 1.5;
+        }
+
+        /*footer*/
+        .footer-container {
+            background-color: #333;
+            color: white;
+
+        }
+
+        .footer-container p {
+            color: white;
+        }
+
+        h4 {
+            color: #007bff;
+        }
+
+        .col-sm-4 {
+            padding: 16px 70px;
+            margin: 0px 102px;
+            text-align: center;
+        }
+
+        .row {
+            place-content: center;
+        }
+
+
+        .start {
+            background-color: #f8f8f8;
+            padding: 40px;
+            border: 1px solid#ccc;
+
+        }
+
+        h3 {
+            font-size: 24px;
+            font-weight: bold;
+            color: #333;
+            margin-bottom: 0;
+        }
+
+        p {
+            font-size: 16px;
+            color: #666;
+            margin-bottom: 0;
+            text-align: center;
+        }
+
+
+        h5 {
+            font-size: 18px;
+            font-weight: bold;
+            color: #333;
+            margin-bottom: 0px;
+        }
+
+        .start {
+            overflow: hidden;
+            /* add clearfix hack to contain floated images */
+        }
+
+        .start img.left {
+            float: left;
+            margin-right: 20px;
+            /* add some spacing between images */
+            margin-right: 30px;
+            /* add some spacing between images */
+            max-width: 30%;
+            /* set a maximum width for the image */
+            height: auto;
+        }
+
+        .start img.right {
+            float: right;
+            margin-left: 20px;
+            /* add some spacing between images */
+            margin-left: 30px;
+            /* add some spacing between images */
+            max-width: 30%;
+            /* set a maximum width for the image */
+            height: auto;
+            /* set height to auto to maintain aspect ratio */
+        }
+
+        
+
+        h6 {
+            align-items: center;
+        }
+    </style>
+</head>
+
+
+<body>
+
+    <div class="nav-container">
+        <ul>
+            <li><a href="{% url 'home' %}">Home</a></li>
+            <li><a href="{% url 'predictor' %}">Services</a></li>
+            <li><a href="{% url  'about' %}">About</a></li>
+            <li><a href="#">Contact</a></li>
+        </ul>
+    </div>
+ -->
+
+
+
+<!-- 
+<div class="start">
+
+    <h3>Welcome to Crop Recommendation System</h3>
+    <p>Here are some questions you might have:</p>
+    <h5>Which crop should be cultivated in farm? <br>
+        Which disease is affecting your crop?
+    </h5>
+    <h5> <br>
+        Don't worry, Explore our services!!
+    </h5>
+    <h6></h6>
+</div>
+
+
+
+
+<h1>Our Services</h1>
+
+<div class="services-container">
+    <div class="service-box">
+        <img src="../static/images/cropservice.jpeg" alt="Crop Service">
+        <a href="{% url  'predictor' %}">
+            <h2>Crop Recommendation System</h2>
+        </a>
+        <p>Our Crop Recommendation System helps farmers to determine the best crops to plant based on their soil
+            type,
+            and climate. <br> We provide personalized crop recommendations that help farmers maximize their yields
+            and
+            profits..</p>
+    </div>
+    <div class="service-box">
+        <img src="../static/images/desease.jpg" alt="Disease Detection Service">
+        <a href="{% url 'plantde'%}">
+            <h2>Disease Detection System</h2>
+        </a>
+
+        <p>Our disease detection system uses advanced image recognition technology to identify crop diseases.
+
+            With our service,farmers can quickly identify and address crop
+            issues, minimizing crop losses and maximizing yields</p>
+    </div>
+</div>
+
+ -->

@@ -1,4 +1,39 @@
-{% load static %}
+{% include "header.html" %}
+
+<div class="site-content">
+  {% block content %}
+  
+  {% endblock %}
+</div>
+
+{% include "footer.html" %}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+{% comment %} {% load static %}
 <!DOCTYPE html>
 <html lang="en">
 
@@ -51,6 +86,12 @@
             margin-right: 1rem;
             margin-left: 1rem;
         }
+
+
+
+
+
+        
     </style>
 </head>
 
@@ -73,16 +114,16 @@
                 <div class="collapse navbar-collapse" id="navbarNav">
                     <ul class="navbar-nav mx-auto">
                         <li class="nav-item">
-                            <a class="nav-link text-purple" href="{% url  'home' %}">Home</a>
+                            <a class="nav-link text-purple" href="#">Home</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link text-purple" href="{% url  'predictor' %}">Crop Prediction</a>
+                            <a class="nav-link text-purple" href="#">About</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link text-purple" href="{% url  'plantde' %}">Plant Disease</a>
+                            <a class="nav-link text-purple" href="#">Contact</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link text-purple" href="{% url  'about' %}">About</a>
+                            <a class="nav-link text-purple" href="#">Login</a>
                         </li>
                     </ul>
                 </div>
@@ -92,3 +133,14 @@
             </div>
         </nav>
     </header>
+
+
+
+
+    {% block content %}
+    <!-- your content goes here -->
+    {% endblock %}
+
+
+
+ {% endcomment %}

@@ -1,40 +1,55 @@
-<footer>
-    <div class="footer-container">
+<style>
+    body {
+        min-height: 100vh;
+    }
+
+    .site-footer {
+        background-color: #242729;
+        color: #fff;
+        padding: 20px 0;
+        position: sticky;
+        top: 100%;
+
+        bottom: 0;
+        width: 100%;
+
+    }
+
+    .site-footer p {
+        margin-bottom: 0;
+    }
+</style>
+
+
+
+<footer class="site-footer">
+    <div class="container">
         <div class="row">
-            <div class="col-sm-4">
-                <h4>About Us</h4>
-                <p>
-                    Group - Aimers <br>
-                    Sanjivani College of Engineering,Kopargaon
-                </p>
-
-                <p>
-                    &COPY; scoe 2023
-                </p>
+            <div class="col-md-6">
+                <p>All rights reserved</p>
+                <p>Group - AIMERS</p>
+                <p>Sanjivani COE Kopargaon</p>
+                <p>&copy; 2023 </p>
             </div>
-
+            <div class="col-md-6">
+                <ul class="list-inline social-buttons">
+                    <li class="list-inline-item">
+                        <a href="#">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                    </li>
+                    <li class="list-inline-item">
+                        <a href="#">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                    </li>
+                    <li class="list-inline-item">
+                        <a href="#">
+                            <i class="fab fa-linkedin-in"></i>
+                        </a>
+                    </li>
+                </ul>
+            </div>
         </div>
     </div>
 </footer>
-
-
-/*footer*/
-.footer-container {
-background-color: #333;
-color: white;
-
-}
-
-h4 {
-color: #007bff;
-}
-
-.col-sm-4 {
-padding: 16px 70px;
-margin: 0px 102px;
-text-align: center;
-}
-
-.row {
-place-content: center;
-}
