@@ -8,7 +8,12 @@
 
 <h1 style="text-align: center">Crop Recommendation System</h1>
 
+
 <div class="container-crp-crop">
+    {% if crop_result %}
+    <div class="crop-result">{{ crop_result }}</div>
+    <a href="/predictor">Go Back</a>
+    {% else %}
 
     <form action="crop_result" method="post">
         {% csrf_token %}
@@ -47,15 +52,16 @@
             <input type="number" required step="any" class="form-control" id="R" name="R"
                 placeholder="Enter Rainfall Value e.g 189">
         </div>
+        <div class="mt-3"></div>
 
-        <button type="submit" class="btn btn-purple text-white">Predict</button>
+        <div class="d-flex align-items-center justify-content-center">
+            <button type="submit" class="btn btn-purple text-white">Predict</button>
+        </div>
     </form>
+    {% endif %}
 
 </div>
 
-{% if crop_result %}
-<div class="crop-result">{{ crop_result }}</div>
-{% endif %}
 
 
 {% endblock %}
