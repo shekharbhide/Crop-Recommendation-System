@@ -1,0 +1,79 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+
+<title>Fertilizer Recommendation System</title>
+<link rel="stylesheet" href="{% static 'CSS/fertilizer.css' %}">
+
+<h1 style="text-align: center">Fertilizer Recommendation System</h1>
+
+
+
+<div class="container-crp-crop">
+    
+
+    <form action="{% url 'recommendation' %}" method="post">
+        {% csrf_token %}
+        <div class="crop-form-group">
+            <label for="N">Enter ratio of Nitrogen </label>
+            <input type="number" required step="any" class="form-control" id="N" name="N"
+                placeholder="Enter Nitrogen(N) Value e.g 56">
+        </div>
+        <div class="crop-form-group">
+            <label for="P">Enter ratio of Phosphorus</label>
+            <input type="number" required step="any" class="form-control" id="P" name="P"
+                placeholder="Enter Phosphorus(P) Value e.g 65">
+        </div>
+        <div class="crop-form-group">
+            <label for="K">Enter ratio of Potassium</label>
+            <input type="number" required step="any" class="form-control" id="K" name="K"
+                placeholder="Enter Potassium(K) Value  e.g 73">
+        </div>
+     
+       
+      <div class="form-group">
+      <label for="crop_name">Enter crop_name</label>
+      <select
+        name="crop_name" class="form-control" id="crop_name"
+        placeholder="Select a crop" required >
+        
+        <option selected>Select crop</option>
+        <option>rice</option>
+        <option>maize</option>
+        <option>chickpea</option>
+        <option>kidneybeans</option>
+        <option>pigeonpeas</option>
+        <option>mothbeans</option>
+        <option>mungbean</option>
+        <option>blackgram</option>
+        <option>lentil</option>
+        <option>pomegranate</option>
+        <option>banana</option>
+        <option>mango</option>
+        <option>grapes</option>
+        <option>watermelon</option>
+        <option>muskmelon</option>
+        <option>apple</option>
+        <option>orange</option>
+        <option>papaya</option>
+        <option>coconut</option>
+        <option>cotton</option>
+        <option>jute</option>
+        <option>coffee</option>
+      </select>
+    </div>
+
+        <div class="mt-3"></div>
+
+        <div class="d-flex align-items-center justify-content-center">
+            <button type="submit" class="btn btn-purple text-white">Predict</button>
+        </div>
+    </form>
+   
+
+</div>
+
+
+
+{% endblock %}

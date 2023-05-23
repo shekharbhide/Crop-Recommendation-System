@@ -56,3 +56,8 @@
     font-weight: bold;
     color: #444;
 }
+
+
+.container-crp-crop .city-form-control{
+    padding: 10px;
+}
