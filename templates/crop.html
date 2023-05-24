@@ -3,7 +3,7 @@
 
 {% block content %}
 
-<title>Crop RecommendationSystemSystem</title>
+<title>Crop Recommendation System</title>
 <link rel="stylesheet" href="{% static 'CSS/crop.css' %}">
 <script src="../static/Javascript/cities.js"></script>
 
@@ -20,7 +20,7 @@
     <a href="/predictor">Go Back</a>
     {% else %}
 
-    <form action="{% url 'fert_recommend' %}" method="post">
+    <form action="{% url 'crop_result' %}" method="post">
         {% csrf_token %}
         <div class="crop-form-group">
             <label for="N">Enter ratio of Nitrogen </label>

@@ -49,18 +49,36 @@ def formInfo(request):
         city_name = request.POST.get("city_name")
         
         temperature, humidity = fetch_weather(city_name)
-       
-        if temperature is not None and humidity is not None:
+  
+
+# Create a DataFrame with feature names
+    input_data = pd.DataFrame({
+    'N': [N],
+    'P': [P],
+    'K': [K],
+    'temperature': [temperature],
+    'humidity': [humidity],
+    'ph': [ph],
+    'rainfall': [R]
+    })
+
+# Make the prediction using the DataFrame
+# prediction = RF.predict(input_data)
+# print("You should Grow:", prediction)
+
+
+    if temperature is not None and humidity is not None:
             print( temperature)
             print(humidity)
-            crop_prediction = crop_model.predict([[N, P, K, temperature, humidity, ph, R]])
+          #  crop_prediction = crop_model.predict([[N, P, K, temperature, humidity, ph, R]])
+            crop_prediction = crop_model.predict(input_data)
 
             context = {
-                'crop_result': "Crop Recommended: " + crop_prediction[0]
+                'crop_result': "You should grow " + crop_prediction[0]
             }
 
             return render(request, 'crop.html', context)
-        else:
+    else:
             return render(request, 'try_again.html')
 
     return render(request, 'crop.html', context)
