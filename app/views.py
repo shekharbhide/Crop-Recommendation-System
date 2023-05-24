@@ -79,7 +79,7 @@ def formInfo(request):
 
             return render(request, 'crop.html', context)
     else:
-            return render(request, 'try_again.html')
+        return render(request, 'try_again.html')
 
     return render(request, 'crop.html', context)
 

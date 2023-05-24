@@ -56,7 +56,7 @@
 
 
 <body>
-    <header>
+    {% comment %} <header>
         <nav class="navbar navbar-expand-lg navbar-light bg-white border rounded">
             <div class="container">
                 <a class="navbar-brand text-purple" href="#">
@@ -94,4 +94,40 @@
                
             </div>
         </nav>
-    </header>
+    </header> {% endcomment %}
+
+    <header>
+    <nav class="navbar navbar-expand-lg navbar-light bg-white border rounded">
+        <div class="container">
+            <a class="navbar-brand text-purple" href="#">
+                <span class="h4 mb-0 ms-2">KrushiSathi</span>
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav mx-auto">
+                    <li class="nav-item">
+                        <a class="nav-link text-purple" href="{% url 'home' %}">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-purple" href="{% url 'predictor' %}">Crop Prediction</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-purple" href="{% url 'plantde' %}">Plant Disease</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-purple" href="{% url 'fert_recommend' %}">Fertilizer Suggestion</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-purple" href="{% url 'about' %}">About</a>
+                    </li>
+                </ul>
+                <div class="d-flex">
+                    <a class="btn btn-purple text-white" href="#">Get Started</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+</header>
