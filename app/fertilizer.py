@@ -16,7 +16,7 @@ fertilizer_dic = {
 
         'Nlow': mark_safe("""The N value of your soil is low.
         <br/> Please consider the following suggestions:
-        <br/><br/> 1. <i>Add sawdust or fine woodchips to your soil</i> – the carbon in the sawdust/woodchips love nitrogen and will help absorb and soak up and excess nitrogen.
+        <br/><br/> 1. <b>Add sawdust or fine woodchips to your soil</b> – the carbon in the sawdust/woodchips love nitrogen and will help absorb and soak up and excess nitrogen.
 
         <br/>2. <i>Plant heavy nitrogen feeding plants</i> – tomatoes, corn, broccoli, cabbage and spinach are examples of plants that thrive off nitrogen and will suck the nitrogen dry.
 
