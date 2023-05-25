@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+
+<title>Crop Details</title>
+<link rel="stylesheet" href="{% static 'CSS/crop_search.css' %}">
+<h1 style="text-align: center">Crop Details</h1>
+   <div class="container-cropsearch">
+        <form class="form" method="POST" action="{% url 'crop_search' %}">
+                {% csrf_token %}
+                <input type="text" name="crop_name" placeholder="Enter crop name" required>
+                <button type="submit">Search</button>
+            </form>
+   </div>
+
+{% endblock %}

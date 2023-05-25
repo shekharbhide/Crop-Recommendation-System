@@ -9,7 +9,9 @@
 
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="{% static 'bootstrap/bootstrap.min.css' %}">
+    
 
+  
     <style>
         /* set the text color of the navbar brand and menu options */
         .navbar-light .navbar-brand,
@@ -56,48 +58,11 @@
 
 
 <body>
-    {% comment %} <header>
-        <nav class="navbar navbar-expand-lg navbar-light bg-white border rounded">
-            <div class="container">
-                <a class="navbar-brand text-purple" href="#">
-                    <!-- Replace the src attribute value with the URL of your logo image -->
-                    <!--  <img src="../static/images/logo2.jpg" alt="Logo" width="30" height="24"
-                        class="d-inline-block align-text-top">   -->
-                    <!-- Replace the text between the <span> tags with your website title -->
-                    <span class="h4 mb-0 ms-2">KrushiSathi</span>
-                </a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
-                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="collapse navbar-collapse" id="navbarNav">
-                    <ul class="navbar-nav mx-auto">
-                        <li class="nav-item">
-                            <a class="nav-link text-purple" href="{% url  'home' %}">Home</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link text-purple" href="{% url  'predictor' %}">Crop Prediction</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link text-purple" href="{% url  'plantde' %}">Plant Disease</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link text-purple" href="{% url  'fert_recommend' %}">Fertilizer Suggestion</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link text-purple" href="{% url  'about' %}">About</a>
-                        </li>
-                    </ul>
-                </div>
-                <a class="btn btn-purple text-white" href="#">Get Started</a>
-                <span class="mx-3"></span>
-               
-            </div>
-        </nav>
-    </header> {% endcomment %}
+
 
     <header>
     <nav class="navbar navbar-expand-lg navbar-light bg-white border rounded">
+       
         <div class="container">
             <a class="navbar-brand text-purple" href="#">
                 <span class="h4 mb-0 ms-2">KrushiSathi</span>
@@ -118,7 +83,10 @@
                         <a class="nav-link text-purple" href="{% url 'plantde' %}">Plant Disease</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link text-purple" href="{% url 'fert_recommend' %}">Fertilizer Suggestion</a>
+                        <a class="nav-link text-purple" href="{% url 'fert_recommend' %}">Fertilizer </a>
+                    </li>
+                     <li class="nav-item">
+                        <a class="nav-link text-purple" href="{% url 'crop_search' %}">Crop Details</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link text-purple" href="{% url 'about' %}">About</a>
@@ -134,3 +102,4 @@
 
  <script src="{% static 'Javascript/jquery.min.js' %}"></script>
     <script src="{% static 'bootstrap/bootstrap.bundle.min.js' %}"></script>
+   

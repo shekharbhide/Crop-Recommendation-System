@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+
+
+<title>Crop Search Result</title>
+<link rel="stylesheet" href="{% static 'CSS/crop_search_result.css' %}">
+
+<h1 style="text-align: center">Crop Search Result for {{crop_name}}</h1>
+
+<div class="container-cropsearch-result">
+       <h1></h1>
+    {% if crop_info %}
+        {{ crop_info|safe }}
+    {% else %}
+        <p>No information found for the specified crop.</p>
+    {% endif %}
+</div>
+
+{% endblock %}

@@ -4,6 +4,7 @@ import requests
 from django.http import JsonResponse,HttpResponse
 import pandas as pd
 from app.fertilizer import fertilizer_dic
+from app.crop_info import crop_dict
 
 # loading our ML model for Crop  Recommendation system
 with open('./saved_models/RandomForest.pkl', 'rb') as file:
@@ -145,3 +146,23 @@ def about(request):
 
 def contact(request):
     return render(request, 'contact.html')
+
+
+
+
+
+
+from .crop_info import crop_dict  # Importing crop_dict from crop_info.py
+
+def crop_search(request):
+    if request.method == 'POST':
+        crop_name = request.POST.get('crop_name')
+        if crop_name in crop_dict:
+            crop_info = crop_dict[crop_name]
+            return render(request, 'crop_search_result.html', {'crop_name':crop_name,'crop_info': crop_info})
+        else:
+            return render(request, 'crop_search_result.html', {'crop_name':crop_name,'crop_info': None})
+    return render(request, 'crop_search.html')
+
+
+
