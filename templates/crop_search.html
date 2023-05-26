@@ -12,6 +12,11 @@
                 <input type="text" name="crop_name" placeholder="Enter crop name" required>
                 <button type="submit">Search</button>
             </form>
+              <ul>
+            {% for crop in crop_names %}
+               <li><a href="{% url 'crop_list' %}?crop_name={{ crop }}">{{ crop }}</a></li>
+            {% endfor %}
+    </ul>
    </div>
 
 {% endblock %}

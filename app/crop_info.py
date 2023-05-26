@@ -61,4 +61,25 @@ aphids<br>
 FIELD17:<br>
 Diseases: Phomopsis blight, damping off, wilt, little leaf (Jassids)""",
         ),  
+
+        'Jui' : mark_safe(""" 
+  Soil: Sandy loam<br>
+  Climate: Mild tropical<br>
+  Varieties: Co-1 Mullai, Co-2 Mullai,<br>
+  Propn method: Semi hard<br>
+  Seed Rate, Spacing & Planting season: 1.8 x 1.8 m,<br>
+  FIELD7:<br>
+  Fertilizer dose: 10 kg<br>
+  FIELD9:<br>
+  Maturity Indices: Flowering start<br>
+  Harvesting: fully develop/<br>
+  FIELD12:<br>
+  Yield: 8<br>
+  FIELD14:<br>
+  FIELD15:<br>
+  Pests: Bud Warm,<br>
+  FIELD17:<br>
+  Diseases: Wilt, Leaf<br>
+  """ ),  
+
 }

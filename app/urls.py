@@ -10,6 +10,7 @@ urlpatterns = [
     path('fert_recommend',views.fert_recommend,name='fert_recommend'),
     path('recommendation',views.fert_recommend,name='recommendation'),
     path('crop_search', views.crop_search, name='crop_search'),
+    #path('disease_detection_view', views.disease_detection_view, name='disease_detection_view')
     
 
 

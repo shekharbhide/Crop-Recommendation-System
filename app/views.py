@@ -165,4 +165,13 @@ def crop_search(request):
     return render(request, 'crop_search.html')
 
 
+def crop_list(request):
+    crop_name = request.GET.get('crop_name')
+    if crop_name in crop_dict:
+        crop_info = crop_dict[crop_name]
+        return render(request, 'crop_search_result.html', {'crop_name': crop_name, 'crop_info': crop_info})
+    else:
+        return render(request, 'crop_search_result.html', {'crop_name': crop_name, 'crop_info': None})
+
+
 
