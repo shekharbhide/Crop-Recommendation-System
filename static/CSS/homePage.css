@@ -1,11 +1,5 @@
-@media (max-width: 768px) {
-    .service-box {
-      width: 100%;
-      margin-bottom: 20px;
-    }
-  }
-  
-  /* Service Box Styles */
+
+ /* Service Box Styles */
   .home-page-container .service-container {
     display: flex;
     flex-wrap: nowrap;
@@ -45,10 +39,14 @@
     color: #888;
   }
   
+  .home-page-container .service-box a {
+    color: #6f42c1; /* Change the color value to your desired color */
+}
+
 
   .home-page-container .header-image {
     width: 100%;
-    max-height: 500px;
+    max-height: 550px;
     object-fit: cover;
 }
 
@@ -85,6 +83,45 @@
   }
   
   
+  .header-image-container .learn-more-button {
+    background-color: #6f42c1;
+    color: white;
+    padding: 12px 24px;
+    font-size: 16px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
   
+  .learn-more-button:hover {
+    background-color: #6f42c1;
+  }
 
 
+
+
+/* Responsive Styles */
+
+
+@media (max-width: 768px) {
+  .home-page-container .service-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  
+  .home-page-container .service-box {
+    width: 100%;
+    max-width: 1000px; /* Adjust the max-width as per your preference */
+    padding: 20px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    margin: 10px;
+  }
+  
+}

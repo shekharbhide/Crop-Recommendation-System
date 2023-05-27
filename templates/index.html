@@ -19,17 +19,17 @@
     <div class="header-image-container">
         <img class="header-image" src="{% static 'images/peek.jpg' %}" alt="Header Image">
         <div class="image-overlay">
-          <h1>Welcome to KrushiSathi</h1>
+          <h1 style="color:aliceblue">Welcome to KrushiSathi</h1>
           <p>We can help you succeed in farming. Learn more about our services and how we can assist you.</p>
-          <button class="learn-more-button">Learn More</button>
+          <button id="learn-more-button" class="learn-more-button">Learn More</button>
         </div>
       </div>
       
       
 
-    <section class="core-value py-5">
+      <section class="core-value py-5 middleofhomepage">
         <div class="container py-md-4">
-            <h3 class="heading mb-sm-5 mb-4 text-center"> About Us</h3>
+            <h3 class="heading mb-sm-5 mb-4 text-center">About Us</h3>
             <div class="row core-grids">
                 <div class="col-lg-6 core-left">
                     <img src="{% static 'images/peek.jpg' %}" class="img-fluid" alt="" />
@@ -38,35 +38,35 @@
                     <h3 class="mt-4">Improving Agriculture, Improving Lives, Cultivating Crops To Make Farmers Increase
                         Profit.</h3>
                     <p class="mt-3">We use state-of-the-art machine learning and deep learning technologies to help you
-                        guide through
-                        the entire farming process. Make informed decisions to understand the demographics of your area,
-                        understand the
-                        factors that affect your crop and keep them healthy for a super awesome successful yield.</p>
+                        guide through the entire farming process. Make informed decisions to understand the demographics of
+                        your area, understand the factors that affect your crop and keep them healthy for a super awesome
+                        successful yield.</p>
                 </div>
             </div>
         </div>
     </section>
+    
 
-    <h2 style="text-align: center">Our Services</h2>
-    <div class="service-container">
+    <h2 id="services-section" style="text-align: center">Our Services</h2>
+    <div id="services-section" class="service-container">
       <div class="service-box">
         <img src="{% static 'images/peek.jpg' %}" alt="Service 1">
-        <h3>Crop Prediction</h3>
+        <h3><a href="/predictor">Crop Prediction</a></h3>
         <p>Get accurate predictions about crop yields based on various factors such as weather conditions, soil quality, and historical data. Plan your farming activities effectively and maximize your productivity.</p>
       </div>
       <div class="service-box">
         <img src="{% static 'images/peek.jpg' %}" alt="Service 2">
-        <h3>Plant Disease</h3>
+        <h3><a href="/plantde">Plant Disease</a></h3>
         <p>Detect and diagnose plant diseases early on to prevent their spread and minimize crop damage. Our advanced algorithms can analyze images of diseased plants and provide recommendations for treatment.</p>
       </div>
       <div class="service-box">
         <img src="{% static 'images/farmer.jpg' %}" alt="Service 3">
-        <h3>Fertilizer</h3>
+        <h3><a href="/fert_recommend">Fertilizer</a></h3>
         <p>Optimize fertilizer usage by understanding the nutrient requirements of your crops. Receive tailored recommendations on the type, quantity, and timing of fertilizer application to ensure healthy and robust plant growth.</p>
       </div>
       <div class="service-box">
         <img src="{% static 'images/peek.jpg' %}" alt="Service 4">
-        <h3>Crop Details</h3>
+        <h3><a href="/crop_search">Crop Details</a></h3>
         <p>Access detailed information about different crop varieties, including growth habits, ideal growing conditions, and common challenges. Make informed decisions and enhance your understanding of various crops.</p>
       </div>
     </div>
@@ -74,7 +74,12 @@
     
 
 
-
+    <script>
+      document.getElementById('learn-more-button').addEventListener('click', function() {
+          var servicesSection = document.getElementById('services-section');
+          servicesSection.scrollIntoView({ behavior: 'smooth' });
+      });
+      </script>
 
 
 
