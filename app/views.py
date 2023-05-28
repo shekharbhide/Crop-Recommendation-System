@@ -221,35 +221,35 @@ def crop_list(request):
 #     return render(request, 'plantde.html')
 
 
-from django.shortcuts import render
-from tensorflow.keras.models import load_model
-import numpy as np
-import tensorflow as tf
+# from django.shortcuts import render
+# # from tensorflow.keras.models import load_model
+# import numpy as np
+# import tensorflow as tf
 
-# Load the model
-model = load_model('./saved_models/version_3.h5')
+# # Load the model
+# model = load_model('./saved_models/version_3.h5')
 
-# Define the class names
-class_names = ['class1', 'class2', ...]  # Update with your actual class names
+# # Define the class names
+# class_names = ['class1', 'class2', ...]  # Update with your actual class names
 
-def plantde(request):
-    if request.method == 'POST':
-        # Get the uploaded image from the request
-        image_file = request.FILES['image']
+# def plantde(request):
+#     if request.method == 'POST':
+#         # Get the uploaded image from the request
+#         image_file = request.FILES['image']
 
-        # Preprocess the image
-        img = tf.keras.preprocessing.image.load_img(image_file, target_size=(256, 256))
-        img = tf.keras.preprocessing.image.img_to_array(img)
-        img = np.expand_dims(img, axis=0)
-        img = img / 255.0  # Normalize the image
+#         # Preprocess the image
+#         img = tf.keras.preprocessing.image.load_img(image_file, target_size=(256, 256))
+#         img = tf.keras.preprocessing.image.img_to_array(img)
+#         img = np.expand_dims(img, axis=0)
+#         img = img / 255.0  # Normalize the image
 
-        # Make the prediction
-        prediction = model.predict(img)
-        predicted_class = class_names[np.argmax(prediction[0])]
+#         # Make the prediction
+#         prediction = model.predict(img)
+#         predicted_class = class_names[np.argmax(prediction[0])]
 
-        # Prepare the context to render in the template
-        context = {'predicted_class': predicted_class}
+#         # Prepare the context to render in the template
+#         context = {'predicted_class': predicted_class}
 
-        return render(request, 'plantde_result.html', context)
+#         return render(request, 'plantde_result.html', context)
 
-    return render(request, 'plantde.html')
+#     return render(request, 'plantde.html')
