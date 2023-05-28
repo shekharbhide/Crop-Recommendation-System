@@ -14,7 +14,7 @@
     <div class="header-image-container">
         <img class="header-image" src="{% static 'images/front1.jpg' %}" alt="Header Image">
         <div class="image-overlay">
-          <h1 style="color:aliceblue">Welcome to KrushiSathi</h1>
+          <h1 id="welcomeText" style="color:aliceblue"></h1>
           <p>We can help you succeed in farming. Learn more about our services and how we can assist you.</p>
           <button id="learn-more-button" class="learn-more-button">Learn More</button>
         </div>
@@ -74,9 +74,31 @@
           var servicesSection = document.getElementById('services-section');
           servicesSection.scrollIntoView({ behavior: 'smooth' });
       });
-      </script>
+</script>
+
+<script>
+  var text = "Welcome to KrushiSathi";
+  var speed = 40; // Time delay between each character (in milliseconds)
+
+  function displayText() {
+    var element = document.getElementById("welcomeText");
+    var currentText = element.innerHTML;
+    if (currentText.length < text.length) {
+      // Add the next character to the displayed text
+      element.innerHTML = text.substring(0, currentText.length + 1);
+      setTimeout(displayText, speed);
+    }
+  }
+
+  // Wait for the document to load before calling the displayText function
+  document.addEventListener("DOMContentLoaded", function() {
+    displayText();
+  });
+</script>
+      
 
 
+  
 
 {% endblock %}
 

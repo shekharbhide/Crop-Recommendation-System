@@ -130,4 +130,32 @@
     margin: 10px;
   }
   
+
+  .header-image-container {
+    height: 200px;
+  }
+
+  .header-image-container .header-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .header-image-container .image-overlay {
+    padding: 10px;
+  }
+
+  #welcomeText {
+    font-size: 20px;
+  }
+
+  .header-image-container .image-overlay p {
+    font-size: 14px;
+    margin-bottom: 10px;
+  }
+
+  .header-image-container .learn-more-button {
+    font-size: 14px;
+    padding: 8px 16px;
+  }
 }
