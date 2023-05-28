@@ -3,45 +3,45 @@
 
 {% block content %}
 <title>About</title>
-<h1>About </h1>
+<link rel="stylesheet" href="{% static 'CSS/about.css' %}">
 
+<h1 style="text-align: center">About</h1>
 
 <!-- Add this code anywhere in the body -->
-<h3>Introduction</h3>
-<section class="intro">
-    <p>"We, Team Aimers, are introducing our project "Crop Recommendation System". Our system aims to revolutionize
-        the agricultural industry by leveraging the power of new technologies such as data science and machine
-        learning to help farmers with crop recommendations."
-    </p>
-</section>
+<section class="about-page-container">
+    <h3>Introduction</h3>
+    <section class="intro">
+        <p>"We, Team Aimers, are introducing our project "Crop Recommendation System". Our system aims to revolutionize
+            the agricultural industry by leveraging the power of new technologies such as data science and machine
+            learning to help farmers with crop recommendations."
+        </p>
+    </section>
 
-<h3>Challenges</h3>
-<section class="challenges">
-    <p>Farmers face the challenge of determining which crop to plant in a particular soil based on its ingredients.
-        Different crops have different requirements for soil characteristics such as pH level, nutrient content like
-        N,P,K, humidity ,temperature and moisture retention capacity. </p>
-    <p>
-        If a farmer chooses the wrong crop for their soil type, the crop may not grow well, leading to low yield and
-        reduced profitability. Additionally, planting the wrong crop in a soil type can lead to soil degradation,
-        reducing its fertility for future crops
-    </p>
-    <p>
-        Hence, it is crucial for farmers to select the right crop for their soil type to maximize yield and maintain
-        soil health. A Crop Recommendation System can assist farmers in making informed decisions by analyzing soil
-        characteristics and providing recommendations for the most suitable crops
-    </p>
-</section>
-<h3>Solution we're providing</h3>
-<section class="solution">
-    <p>
-        Through extensive research and analysis, we have developed an intelligent Machine Learning algorithm that
-        takes various input
-        of
-        soil condition such as Nitrogen, Potassium, Phosphorus and another parameters such as
-        temperature,humidity,pH
-        and rainfall. And model suggest the most suitable crops for a given farm. Our system not only increases crop
-        yield and profitability but also promotes sustainable farming practices.
-    </p>
+    <h3>Challenges</h3>
+    <section class="challenges">
+        <p>Farmers face the challenge of determining which crop to plant in a particular soil based on its ingredients.
+            Different crops have different requirements for soil characteristics such as pH level, nutrient content like
+            N, P, K, humidity, temperature, and moisture retention capacity.</p>
+        <p>
+            If a farmer chooses the wrong crop for their soil type, the crop may not grow well, leading to low yield and
+            reduced profitability. Additionally, planting the wrong crop in a soil type can lead to soil degradation,
+            reducing its fertility for future crops.
+        </p>
+        <p>
+            Hence, it is crucial for farmers to select the right crop for their soil type to maximize yield and maintain
+            soil health. A Crop Recommendation System can assist farmers in making informed decisions by analyzing soil
+            characteristics and providing recommendations for the most suitable crops.
+        </p>
+    </section>
+    <h3>Solution we're providing</h3>
+    <section class="solution">
+        <p>
+            Through extensive research and analysis, we have developed an intelligent Machine Learning algorithm that
+            takes various inputs of soil conditions such as Nitrogen, Potassium, Phosphorus, and other parameters such as
+            temperature, humidity, pH, and rainfall. The model suggests the most suitable crops for a given farm. Our system
+            not only increases crop yield and profitability but also promotes sustainable farming practices.
+        </p>
+    </section>
 </section>
 
 {% endblock %}

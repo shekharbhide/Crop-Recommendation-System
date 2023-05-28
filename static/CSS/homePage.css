@@ -27,6 +27,12 @@
     object-fit: cover;
     border-radius: 5px;
     margin-bottom: 10px;
+      width:  200px;
+      height: 100px;
+      /* object-fit: cover;
+   */
+   background-size: cover;
+
   }
   
   .home-page-container .service-box h3 {
@@ -36,7 +42,7 @@
   
   .home-page-container .service-box p {
     font-size: 16px;
-    color: #888;
+    color: black;
   }
   
   .home-page-container .service-box a {

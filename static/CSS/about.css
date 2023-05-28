@@ -1,0 +1,36 @@
+/* homePage.css */
+
+.about-page-container {
+        /* Add styles for the container surrounding the about page */
+        /* Example styles */
+        background-color: #f2f2f2;
+        padding: 20px;
+        border-radius: 5px;
+        
+        /* Center alignment */
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+      }
+      
+      .about-page-container    .intro {
+        /* Add styles for the introduction section */
+        /* Example styles */
+        margin-bottom: 20px;
+      }
+      
+      .about-page-container     .challenges {
+        /* Add styles for the challenges section */
+        /* Example styles */
+        margin-bottom: 20px;
+      }
+      
+      .about-page-container    .solution {
+        /* Add styles for the solution section */
+        /* Example styles */
+        margin-bottom: 20px;
+      }
+      
+      /* Add any additional styles for the about page */
+      

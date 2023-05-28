@@ -8,13 +8,12 @@
 <link rel="stylesheet" href="{% static 'CSS/crop.css' %}">
 
 <h1 style="text-align: center;">Plant Disease Detection System</h1>
-<hr>
-<div class="container">
-
-    <h5 style="text-align: center">Service will be available soon</h5> <br>
-    <br>
-    
-</div>
+<h1>Plant Disease Prediction</h1>
+<form method="post" enctype="multipart/form-data">
+  {% csrf_token %}
+  <input type="file" name="image" accept="image/*" required>
+  <button type="submit">Predict1</button>
+</form>
 
 
 {% endblock %}

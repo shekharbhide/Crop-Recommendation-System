@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+
+{% load static %}
+
+{% block content %}
+
+<title>Plant Disease Detection System</title>
+<link rel="stylesheet" href="{% static 'CSS/crop.css' %}">
+
+<h1>Prediction Result:</h1>
+<p>Predicted Label: {{ predicted_label }}</p>
+
+
+
+{% endblock %}

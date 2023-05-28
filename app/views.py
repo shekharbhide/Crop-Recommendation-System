@@ -175,3 +175,81 @@ def crop_list(request):
 
 
 
+
+# import os
+# from django.conf import settings
+# from django.shortcuts import render
+# from tensorflow.keras.models import load_model
+# from tensorflow.keras.preprocessing import image
+# import matplotlib.pyplot as plt
+# from PIL import Image
+# import numpy as np
+# def plantde(request):
+#     if request.method == 'POST':
+#         # Get the uploaded image from the POST request
+#         uploaded_image = request.FILES['image']
+
+#         # Save the uploaded image to a temporary file
+#         img_path = os.path.join(settings.MEDIA_ROOT, uploaded_image.name)
+#         with open(img_path, 'wb+') as f:
+#             for chunk in uploaded_image.chunks():
+#                 f.write(chunk)
+
+#         # Load the model
+#         model_path = os.path.join(settings.BASE_DIR, './saved_models/version_3.h5')  # Update with the actual path to your model file
+#         model = load_model(model_path)
+
+#         # Preprocess the input image
+#         # Preprocess the input image
+#         img = image.load_img(img_path, target_size=(256, 256))
+#         img_array = image.img_to_array(img) / 255.0
+#         img_array = img_array.reshape(1, 256, 256, 3)
+
+
+#         # Make the prediction
+#         class_names = ['Class 0', 'Class 1', 'Class 2']  # Update with your actual class labels
+#         predictions = model.predict(img_array)
+#         predicted_class_index = np.argmax(predictions[0])
+#         predicted_label = class_names[predicted_class_index]
+
+#         # Delete the temporary image file
+#         os.remove(img_path)
+
+#         # Render the result in the template
+#         return render(request, 'plantde_result.html', {'predicted_label': predicted_label})
+
+#     return render(request, 'plantde.html')
+
+
+from django.shortcuts import render
+from tensorflow.keras.models import load_model
+import numpy as np
+import tensorflow as tf
+
+# Load the model
+model = load_model('./saved_models/version_3.h5')
+
+# Define the class names
+class_names = ['class1', 'class2', ...]  # Update with your actual class names
+
+def plantde(request):
+    if request.method == 'POST':
+        # Get the uploaded image from the request
+        image_file = request.FILES['image']
+
+        # Preprocess the image
+        img = tf.keras.preprocessing.image.load_img(image_file, target_size=(256, 256))
+        img = tf.keras.preprocessing.image.img_to_array(img)
+        img = np.expand_dims(img, axis=0)
+        img = img / 255.0  # Normalize the image
+
+        # Make the prediction
+        prediction = model.predict(img)
+        predicted_class = class_names[np.argmax(prediction[0])]
+
+        # Prepare the context to render in the template
+        context = {'predicted_class': predicted_class}
+
+        return render(request, 'plantde_result.html', context)
+
+    return render(request, 'plantde.html')
